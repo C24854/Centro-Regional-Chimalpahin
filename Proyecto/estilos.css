@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 90px;
+}
+
+.seccion p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.titulo-separador {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.seccion {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ir-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #6a0b17;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #6a0b17;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.logo {
+  height: 100px;
+}
+
+.menu-toggle-checkbox {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#inicio {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+#inicio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('Imagenes/Vista.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+h1{
+  font-size: 30px;
+  color: #6a0b17;
+}
+
+p{
+  font-size: 18px;
+  color: #000000;
+}
+.imagenes-inicio {
+  position: relative;
+  z-index: 1;
+}
+
+.imagenes-inicio {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.imagenes-inicio img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #000000;
+}
+
+.separador {
+  background-color: #6a0b17;
+  text-align: left;
+  padding: 15px 0;
+  padding-left: 20px;
+}
+
+#exposicion {
+  background-image: url('Imagenes/Fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+  padding: 60px 20px;
+  opacity: 0.2;
+}
+
+.expo-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.expo-item img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.expo-item div {
+  flex: 1;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.historia-torso {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.historia-torso img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.historia-torso p {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.imagen-historia-extra {
+  display: block;
+  margin: 40px auto 0;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.imagen-sorjuana {
+  width: 250px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Tabla de talleres */
+.tabla-talleres {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-talleres th,
+.tabla-talleres td {
+  border: 1px solid #6a0b17;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.tabla-talleres th {
+  background-color: #6a0b17;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.contacto-info {
+  flex: 1;
+}
+
+.contacto-info p {
+  margin: 10px 0;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+.mapa {
+  flex: 1;
+  min-width: 300px;
+}
+
+.boton-contacto,
+.boton-facebook {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #6a0b17;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.footer {
+  background-color: #6a0b17;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #6a0b17;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle-checkbox:checked + .menu-icon + .nav {
+    display: flex;
+  }
+
+  .historia-torso {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .historia-torso img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .expo-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mapa, .contacto-info {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .contacto-container {
+    flex-direction: column;
+  }
+}
